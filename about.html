@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Livsey's Park</title>
+    <!-- This meta data is for the resizing and screen resoultion for different size devices and screen resolutions-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.header { /* how big i want the box to be for my header, the color of the box, making sure that it is in the center of the box, and the text color. added extra margin so that it would not overlap with the nav bar*/
+    padding: 100px;
+    text-align: center;
+    background: black ;
+    color: orange;
+    margin-top: 58px;
+}
+nav { /* this nav has a fixed position, so as you scroll through the website, you can quickly jump to another page of the website*/
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+nav a { /* styling of the nav bar*/
+    float: left;
+    display: block;
+    background-color: orange;
+    color:black;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: underline;
+    width:33.33%;
+    box-sizing: border-box;
+    border-right: 1px solid black;
+}
+nav a:hover { /* hover element for nav bar that will invert the colors when hovering*/
+            background-color: black;
+            color: orange;
+}
+.container{ /* this helps with the formatting and resizing of the pages based of screen size and resolution*/
+display: flex;
+flex-wrap: wrap;
+}
+.column{ /* this is going to create columns for my content so i can divide the page into two different sections*/
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: rgb(59, 58, 58);
+    color:cornsilk;
+
+}
+</style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Homepage</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="header"> 
+        <h1>About Us!</h1>
+    </div>
+    <div class="container">
+        <div class="column">
+            <h2>This is the first column</h2>
+            <p>content holder</p>
+            <p>image holder</p>
+        </div>
+        <div class="column">
+            <h2>This is the second column</h2>
+            <p>content holder</p>
+            <p>image holder </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

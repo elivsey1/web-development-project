@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Livsey's Park</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+}
+.header { /* how big i want the box to be for my header, the color of the box, making sure that it is in the center of the box, and the text color*/
+    padding: 20px; 
+    text-align: center;
+    background: black ;
+    color: orange;
+    margin-top: 58px;
+}
+nav { /* this nav has a fixed position, so as you scroll through the website, you can quickly jump to another page of the website*/
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+nav a {
+    float: left;
+    display: block;
+    background-color: orange;
+    color:black;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: underline;
+    width:33.33%;
+    box-sizing: border-box;
+    border-right: 1px solid black;
+}
+nav a:hover { /* hover to change color when cursor is over it */
+            background-color: black;
+            color: orange;
+}
+.img-style { /* image banner that carries the image across the screen */
+    width: 100vw; 
+    height: 300px; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0; 
+}
+h3{
+    text-align: center;
+}
+form { /*from formatiing */
+    max-width: 400px;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+input, textarea { /* formatting for both the input and the text area, combined them because they both need the same type but, comment get resized based off text being input*/
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+button {
+    background-color: black;
+    color: orange;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    
+}
+button:hover {
+    background-color: orange;
+    color:black;
+}
+</style>
+<script>
+    function validateForm() {
+        // input values
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+
+        // Email validation using a simple pattern
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            return false; // Prevent form submission
+        }
+
+        // If all validations pass, the form will be submitted
+        return true;
+    }
+    function clearForm() {
+            // Clear the form by resetting its fields
+            document.getElementById('contactForm').reset();
+    }
+</script>
+</head>
+<body>
+    <nav> <!--nav bar with links and labels-->
+        <a href="index.html">Homepage</a>
+        <a href="about.html">About Us</a>
+        <a href="#contact.html">Contact Us</a>
+    </nav>
+    <div class="header">
+        <h1>Livsey Recreational ATV and OHV Park</h1>
+    </div>
+    <img src="image1.jpeg" class="img-style">
+    <h3>If you have any questions or regards, please fill out this form and our team shall get back with you with 24 - 48 hours</h3>
+    <form id="contactForm" onsubmit="return validateForm()"> <!--form submission button using onsubmit-->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+<!-- submit and clear buttons with onclick fucntion to clear form-->
+        <button type="submit">Submit</button>
+        <button type="button" onclick="clearForm()">Clear</button>
+    </form>
+</body>
+</html>

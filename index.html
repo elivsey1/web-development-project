@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Livsey Recreational ATV and OHV Park</title>
+    <!-- This meta data is for the resizing and screen resoultion for different size devices and screen resolutions-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+body {
+    font-family: Arial, Helvetica, sans-serif; /*font style of website*/
+    margin: 0;
+}
+.header { /* how big i want the box to be for my header, the color of the box, making sure that it is in the center of the box, and the text color*/
+    padding: 100px; 
+    text-align: center;
+    background: black ;
+    color: orange;
+}
+.img-style { /* was playing around with the code for a picture, tbd if it gets used, also have not found a picture to use that will not get distoreted */
+            width: 100vw; /* Set width to 100% of the viewport width */
+            height: 300px; /* Set height to 300px height */
+            object-fit: cover; /*Maintain aspect ratio while covering the whole container */
+            display: block; /* Remove extra space below the image */
+            margin: 0; /* Remove default margin */
+}
+nav {
+    overflow: hidden; /*This allows for the nav bar to stay posiioned at the top even after you scroll past the header*/
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+}
+nav a { /* styling of the nav bar*/
+    float: left;
+    display: block;
+    background-color: orange;
+    color:black;
+    text-align: center;
+    padding: 20px 30px; 
+    text-decoration: underline;
+    width:33.33%;
+    box-sizing: border-box;
+    border-right: 2px solid black;
+    
+}
+nav a:hover { /* hover element for nav bar that will invert the colors when hovering*/
+            background-color: black;
+            color: orange;
+        }
+
+</style>
+</head>
+<body>
+    <div class="header"> 
+    <h1> Welcome to Livsey's Recreational ATV OHV and RV Park</h1>
+    </div>
+    <nav>
+        <a href="index.html">Homepage</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <img src="mainpageimage.jpeg" class="img-style"> <!--places image on page and uses references -->
+</body>
+</html>
