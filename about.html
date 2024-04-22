@@ -41,7 +41,11 @@ nav a:hover { /* hover element for nav bar that will invert the colors when hove
 }
 .container{ /* this helps with the formatting and resizing of the pages based of screen size and resolution*/
 display: flex;
-flex-wrap: wrap;
+}
+.start{/*Special rule to keep the Our Start section of the website in its own box*/
+    padding: 20px;
+    background-color: rgb(59, 58, 58);
+    color:cornsilk;
 }
 .column{ /* this is going to create columns for my content so i can divide the page into two different sections*/
     flex: 1;
@@ -51,6 +55,23 @@ flex-wrap: wrap;
     background-color: rgb(59, 58, 58);
     color:cornsilk;
 
+}
+.box {
+    padding: 20px;
+    margin-bottom: 10px; /* Add margin between boxes */
+    border-bottom: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+  }
+
+  .column {
+    flex: none; 
+    width: 100%; /* Each column takes full width on smaller screens */
+    margin-bottom: 20px; /* Add margin between columns */
+  }
 }
 </style>
 </head>
@@ -63,17 +84,44 @@ flex-wrap: wrap;
     <div class="header"> 
         <h1>About Us!</h1>
     </div>
+    <div class="start">
+        <div class="column">
+            <h1 align="center">Our Start </h1>
+            <h2 align="center">Established in 1999</h2>
+            <p>The Livsey's land was bestowed upon us as promise land from when we were slaves. We first used this land as farmland, housing, and schools. Then when the crops dried up and the Livsey's dispersed into all parts of Georgia, there was no one to upkeep and take care of the land. Then one day, a bored Livsey named Eric Livsey had a passion for the outdoors and ATV riding. He saw a great financial opportunity to maintain and pay for the upkeep of the land while also fun and joy to others who dared for some adventure. In 1997 he saw a vision to combine fun, family, and adventure, and 2 years later he created Livsey's Rec. This became a father and son venture that became a booming success, and if it wasn't for our valued and loyal adventurers, we would still be acres of dirt and trees. We value and thank your for your business here at Livsey's Recreational ATV OHV and RV Park and we hope you come visit soon!! </p>
+            <img src="ourstart.jpeg" alt="Father and Son" style="display: block; margin: 0 auto; width: 50%; height: auto;">
+        </div>
+    </div>
     <div class="container">
         <div class="column">
-            <h2>This is the first column</h2>
-            <p>content holder</p>
-            <p>image holder</p>
+            <div class="box">
+                <h1>Rentals</h1>
+                <h2>ATVs and Side by Sides</h2>
+                <p>Here at Livsey's Rec, we cater to all. Thoes who have and thoes who don't. We aim to create an enviornment where all are welcome, so if you don't feel like going out and dropping thousands of dollars on all terrain vehicles. You are in the right place. If you want to stay on the safer side but still have a blast, we rent Side by Sides that have a full roll cage that will protect the driver and their passengers. If you want to have a more thrilling adeventure, we rent our high output ATV's. We also rent buggys, and currently working on getting Jeeps. Deposits start at $1000 dollars and you have the choice to rent by the hour or the day depending on how long your stay is. Rates will vary based on season. For more inquiry, please feel free to conatact us and one of our representatives will best assist you.</p>
+                <img src="rentals.jpeg" alt="Rental Image" style="width:100%;">
+            </div>
+          <div class="box">
+            <h1>RV's and Cabins</h1>
+            <h2><b>The fun shall not stop!!</b></h2>
+            <p>We know that no one every wants the fun, thrill, and adventure to end, so here at Livsey's Rec, you are allowed to bring your campers and RV's to have an extended stay. We provide water and power hook ups if needed so you can stay and stay comfortably. We also rent our beautiful and luxurious cabins to chill and relax after a fun-filled day. Equipped with personal (full bathrooms), kitchens, and choices of 1 - 4 rooms. Our courtyard consist of grills and firepits, so if you want to hangout and cookout you most definitly can.  </p>
+            <img src="Cabins.jpeg" alt="Cabins Image" style="width:100%;">
+          </div>
         </div>
         <div class="column">
-            <h2>This is the second column</h2>
-            <p>content holder</p>
-            <p>image holder </p>
+          <div class="box" style="padding-top: 50px; padding-bottom: 120px;">
+            <h1>Repair Shop</h1>
+            <h2><b>Had an Uh-Oh?</b></h2>
+            <p>Don't worry we got you covered. We have a full service on-site repair shop to help any fellow adventurer to get right back on the trails. From tires, shocks, batteries, springs, busted a-arms and more, we have got you covered. We know that things happen, but that doesn't mean that the excitement should stop. We, at Livsey's Rec, will try our best to make sure you get back to the trails in no time!! </p>
+            <img src="Repairshop.jpeg" alt="Repair Shop Image" style="width:100%;">
+          </div>
+          <div class="box" style="padding-top: 90px; padding-bottom: 50px;">
+            <h1>ATV General Store</h1>
+            <h2><b>Left your helmet? Goggles? Lunch? Gear?</b></h2>
+            <p>Our services don't stop there!!! We have everything that you would need to makes sure that you have the most comfortable day or extended stay here at Livsey's Rec. We have everything from food, to helmets and gear, phone chargers, oil for your vehicles, and even a sandwhich bar. We aim to cater the most relaxing, stress free, yet thrilling and excititing stay here.  </p>
+            <img src="store.jpg" alt="General Store Image" style="width:100%;">
+          </div>
         </div>
+      </div>
 
     </div>
 
