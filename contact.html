@@ -75,6 +75,14 @@ button:hover {
     background-color: orange;
     color:black;
 }
+.contactbanner { 
+    padding: 20px; 
+    text-align: center;
+    background: orange ;
+    color: black;
+    margin-top: 58px;
+    font-size: 14px;
+}
 </style>
 <script>
     function validateForm() {
@@ -102,25 +110,32 @@ button:hover {
     <nav> <!--nav bar with links and labels-->
         <a href="index.html">Homepage</a>
         <a href="about.html">About Us</a>
-        <a href="#contact.html">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
     <div class="header">
         <h1>Livsey Recreational ATV and OHV Park</h1>
     </div>
     <img src="image1.jpeg" class="img-style">
     <h3>If you have any questions or regards, please fill out this form and our team shall get back with you with 24 - 48 hours</h3>
-    <form id="contactForm" onsubmit="return validateForm()"> <!--form submission button using onsubmit-->
+    <form id="contactForm" action="/submitForm" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="comment">Comment:</label>
+        <label for="comment">Comments, Questions or Registration Info:</label>
         <textarea id="comment" name="comment" rows="4" required></textarea>
 <!-- submit and clear buttons with onclick fucntion to clear form-->
         <button type="submit">Submit</button>
         <button type="button" onclick="clearForm()">Clear</button>
     </form>
+    <div>
+        <div class="contactbanner">
+            <h1>Phone: 678-275-8275</h1>
+            <h1>Fax: 678-275-8276</h1>
+            <h1>Email: LivseyRecATV@outlook.com</h1>
+        </div>
+    </div>
 </body>
 </html>
